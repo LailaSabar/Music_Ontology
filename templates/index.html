@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>Music Ontology</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="{{url_for('static',filename= 'magnific-popup.css')}}">
+
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/slick.css')}}">
+
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/LineIcons.css')}}">
+
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/bootstrap.min.css')}}">
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/default.css')}}">
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css')}}">
+
+</head>
+
+<body>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="static/images/logo.jpeg" alt="logo université de paris" width="110" height="45" /> &nbsp; &nbsp; &nbsp;
+  <a class="navbar-brand" href="#">Music Platform</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    <section id="services" class="features-area">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-6 col-md-10">
+                  <div class="section-title text-center pb-10">
+
+
+                  </div> <!-- row -->
+                  {% from "_formhelpers.html" import render_field %}
+                  <form method="post" class="form-inline">
+
+
+
+                <span class="form-horizontal">
+                    <h5>Wikipedia</h5><br>
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                                      {{ render_field(form1.search) }}
+                  <button class="btn btn-outline-dark btn-sm" type="submit">Search</button>
+                  </span>
+
+                 </form>
+
+
+                   </div> <!-- row -->
+                  {% from "_formhelpers.html" import render_field %}
+                  <form method="post" class="form-inline">
+                    <span class="form-horizontal">
+                        <h5>Ontology</h5><br>
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                      {{ render_field(form2.search2) }}
+                     <button class="btn btn-outline-dark btn-sm" type="submit">Search</button>
+                    </span></form>
+
+              </div>
+          </div>
+         <br><br><br> <center><h3>Albums List</h3></center><br><br>
+            <div class="row justify-content-center">
+              {% for album in albums %}
+
+
+        <!-- row -->
+
+                <div class=" card-group">
+                    <div class="card " style="width: 18rem;">
+                         <img class="card-img-top" src="static/images/{{album}}.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{album.replace('_',' ')}}</h4>
+                            <h5><a class="features-btn" href="/album/{{album}}" target="_blank">Get Details</a> </h5>
+                        </div>
+
+                    </div> <!-- single features -->
+                </div>
+
+                {% endfor %}
+      </div> <!-- row -->
+      </div> <!-- container -->
+    </section>
+
+    <section id="services" class="features-area">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-6 col-md-10">
+                  <div class="section-title text-center pb-10">
+                      <h3 class="title">Clients</h3><br><br>
+                  </div> <!-- row -->
+              </div>
+          </div>
+            <div class="row justify-content-center">
+
+
+              {% for individu in individus %}
+
+
+        <!-- row -->
+                <div class=" card-group ">
+                    <div class="card  " style="width: 10rem; ">
+                          <img class="card-img-top" width="400" height="200" src="static/images/{{individu}}.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="features-title">{{individu}}</h4>
+                            <a class="features-btn" href="/individus/{{individu}}" target="_blank">Get Details</a>
+                        </div>
+
+                    </div> <!-- single features -->
+                </div>
+
+                {% endfor %}
+
+
+
+
+      </div> <!-- row -->
+      </div> <!-- container -->
+    </section>
+
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+
+
+
+
+    <!--====== Jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!--====== Ajax Contact js ======-->
+    <script src="assets/js/ajax-contact.js"></script>
+
+    <!--====== Isotope js ======-->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <!--====== Scrolling Nav js ======-->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

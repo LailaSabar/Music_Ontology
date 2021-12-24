@@ -1,0 +1,682 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#"
+     xml:base="http://www.semanticweb.org/macbook/ontologies/2021/11/Music"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#acheter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#acheter">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Client"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <rdfs:comment>un client achète un album</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#appartenir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#appartenir">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Diamant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Or"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Platine"/>
+        <rdfs:comment>un album appartient a un disqueType</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#composer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#composer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Compositeur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <rdfs:comment>un compositeur compose une chanson</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#contenir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#contenir">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <rdfs:comment>un album contient des chansons</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#de_genre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#de_genre">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <rdfs:comment>une chanson est de genre métal, classique, ...</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#de_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#de_type">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <rdfs:comment>la chanson est de type video ou audio</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#etre_vendu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#etre_vendu">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Client"/>
+        <rdfs:comment>un album peut être vendu à un client</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#interpreter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#interpreter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Interprete"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <rdfs:comment>un interpréteur interprète une chanson</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#rediger -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#rediger">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Auteur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <rdfs:comment>un auteur rédige une chanson</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#vendre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#vendre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Artiste"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <rdfs:comment>Un artiste peut vendre un album ou une chanson</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#date_sortie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#date_sortie">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#prix -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#prix">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#rating">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#ventes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#ventes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>nombre des des exmenplaire d&apos;album vendus</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Artiste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Artiste"/>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Auteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Auteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Artiste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Client -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Client"/>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Compositeur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Compositeur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Artiste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Diamant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Diamant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#DisqueType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#etre_vendu"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">500000</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#DisqueType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#DisqueType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Interprete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Interprete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Artiste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Or -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Or">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#DisqueType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#etre_vendu"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">50000</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Platine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Platine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#DisqueType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#etre_vendu"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100000</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#TypeFichier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#TypeFichier"/>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#groupe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#groupe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Interprete"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#seul"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#seul -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#seul">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Interprete"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <appartenir rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#platine"/>
+        <contenir rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sugar"/>
+        <de_type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Video"/>
+        <etre_vendu rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Laila"/>
+        <date_sortie rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-29T00:00:00</date_sortie>
+        <prix rdf:datatype="http://www.w3.org/2001/XMLSchema#float">14.0</prix>
+        <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</rating>
+        <ventes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">305000</ventes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Audio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Audio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#TypeFichier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Bruno_Mars -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Bruno_Mars">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Artiste"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Auteur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Compositeur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Interprete"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#seul"/>
+        <composer rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#the_lazy_song"/>
+        <interpreter rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#the_lazy_song"/>
+        <rediger rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#the_lazy_song"/>
+        <vendre rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#studio_doo_wops_hooligans"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Daniel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Daniel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Client"/>
+        <acheter rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Ed_Sheeran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Ed_Sheeran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Artiste"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Auteur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Compositeur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Interprete"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#seul"/>
+        <composer rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#bad_habits"/>
+        <interpreter rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#bad_habits"/>
+        <rediger rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#bad_habits"/>
+        <vendre rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#equal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Laila -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Laila">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Client"/>
+        <acheter rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Maroon_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Maroon_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Artiste"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Auteur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Compositeur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Interprete"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#seul"/>
+        <composer rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sugar"/>
+        <interpreter rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sugar"/>
+        <rediger rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sugar"/>
+        <vendre rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Oussama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Oussama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Client"/>
+        <acheter rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#love_on_the_beat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Rim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Rim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Client"/>
+        <acheter rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#studio_doo_wops_hooligans"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Video -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Video">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#TypeFichier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Zouhair -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Zouhair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Client"/>
+        <acheter rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#equal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#alex_beaupain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#alex_beaupain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Artiste"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Auteur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Compositeur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Interprete"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#seul"/>
+        <composer rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sorry_angel"/>
+        <interpreter rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sorry_angel"/>
+        <rediger rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sorry_angel"/>
+        <vendre rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#love_on_the_beat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#bad_habits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#bad_habits">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <de_genre rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#pop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#classique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#classique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#country -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#country">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#diamant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#diamant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#DisqueType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#electronique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#electronique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#equal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#equal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <appartenir rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#or"/>
+        <contenir rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#bad_habits"/>
+        <de_type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Video"/>
+        <etre_vendu rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Zouhair"/>
+        <date_sortie rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">2021-10-29T00:00:00</date_sortie>
+        <prix rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</prix>
+        <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.6</rating>
+        <ventes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">94527</ventes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#hard_rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#hard_rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#love_on_the_beat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#love_on_the_beat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <appartenir rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#platine"/>
+        <contenir rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sorry_angel"/>
+        <de_type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Video"/>
+        <etre_vendu rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Oussama"/>
+        <date_sortie rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1984-10-02T00:00:00</date_sortie>
+        <prix rdf:datatype="http://www.w3.org/2001/XMLSchema#float">17.0</prix>
+        <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</rating>
+        <ventes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">400000</ventes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#or -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#or">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#DisqueType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#platine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#platine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#DisqueType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#pop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#pop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#rap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#rap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sorry_angel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sorry_angel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <de_genre rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#pop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#studio_doo_wops_hooligans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#studio_doo_wops_hooligans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Album"/>
+        <appartenir rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#platine"/>
+        <contenir rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#the_lazy_song"/>
+        <de_type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Video"/>
+        <etre_vendu rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Rim"/>
+        <date_sortie rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-10-03T00:00:00</date_sortie>
+        <prix rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</prix>
+        <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.2</rating>
+        <ventes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200000</ventes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#sugar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <de_genre rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#pop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#the_lazy_song -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#the_lazy_song">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Chanson"/>
+        <de_genre rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#pop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/macbook/ontologies/2021/11/Music#transe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#transe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Diamant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Or"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/macbook/ontologies/2021/11/Music#Platine"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
