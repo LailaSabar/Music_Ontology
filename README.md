@@ -2,7 +2,7 @@
 
 ### Installation :
 
-On the root folder of the project, run on terminal :
+Run this command on terminal to install the requierements:
 
 ```
 pip3 install -r requirement.txt
@@ -10,11 +10,11 @@ pip3 install -r requirement.txt
 
 ### Usage :
 
-To launch the app, on the root folder of the project, run on terminal :
+Run this command on terminal to lunch the app :
 
 ```
 python3 app.py
 ```
 
-A front end of the web app is accessible at `http://127.0.0.1:5000`
+The web page is accessible at `http://127.0.0.1:5000`
 
